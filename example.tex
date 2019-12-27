@@ -1,0 +1,85 @@
+\documentclass[13pt, dvipdfmx]{beamer}
+
+\usepackage{beamerthemesimple}
+
+\title{example}
+\author{author name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}[fragile]{About}
+    \begin{itemize}
+        \item This is a simple beamer themre
+        \item You can easily change color theme by defiing colors
+        \item Some settings are for Japanese
+        \begin{itemize}
+            \item You can use Japanse by \verb|\usejapanese|
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{itemize}
+    \begin{itemize}
+        \item item
+            \begin{itemize}
+                \item subitem
+                    \begin{itemize}
+                        \item subsubitem
+                    \end{itemize}
+            \end{itemize}
+        \item item
+    \end{itemize}
+
+    \begin{enumerate}
+        \item item
+            \begin{enumerate}
+                \item subitem
+                    \begin{enumerate}
+                        \item subsubitem
+                    \end{enumerate}
+            \end{enumerate}
+        \item item
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Blocks}
+    \begin{block}{block title}
+        this is a block
+    \end{block}
+
+    \begin{alertblock}{alertblock title}
+        this is an alert block
+    \end{alertblock}
+        
+    \begin{exampleblock}{exampleblock title}
+        this is an exampleblock
+    \end{exampleblock}
+
+    \begin{definition}
+        this is a definition
+    \end{definition}
+\end{frame}
+
+
+\begin{frame}[fragile]{Color scheme}
+    \begin{itemize}
+        
+        \item You can use color schemes by
+            \begin{itemize}
+                \item \verb|\setcolorschemeblue|
+                \item \verb|\setcolorschemepurple|
+            \end{itemize}
+            or defining your own color shemes
+
+        \item You can define three colors in your color schemes
+        \begin{itemize}
+            \item \color{textcolor}{textcolor}
+            \item \color{maincolor}{maincolor}
+            \item \color{alertcolor}{alertcolor}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{document}

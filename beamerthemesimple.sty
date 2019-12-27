@@ -1,0 +1,102 @@
+\usepackage{listings}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[absolute,overlay]{textpos}
+
+\usetheme{Boadilla}
+
+% ========= colors =========
+
+\newcommand{\setcolorschemeblue}{
+    \definecolor{textcolor}{RGB}{38,38,38}
+    \definecolor{maincolor}{RGB}{0, 134, 171}
+    \definecolor{alertcolor}{RGB}{206, 119, 84}
+}
+
+\newcommand{\setcolorschemepurple}{
+    \definecolor{textcolor}{RGB}{38,38,38}
+    \definecolor{maincolor}{RGB}{93, 100, 158}
+    \definecolor{alertcolor}{RGB}{218, 98, 114}
+}
+
+\setcolorschemeblue
+
+\setbeamercolor{normal text}{fg=textcolor}
+\setbeamercolor{structure}{fg=maincolor}
+\setbeamercolor{block title}{fg=maincolor!50!black}
+\setbeamercolor{alerted text}{fg=alertcolor}
+\setbeamercolor{frametitle}{fg=maincolor}
+
+
+% ========= fonts =========
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usefonttheme{professionalfonts}
+\usepackage[deluxe,expert]{otf}
+\usefonttheme{structurebold}
+\setbeamerfont{frametitle}{size=\LARGE}
+\setbeamerfont{title}{size=\Huge}
+\usepackage{pxjahyper}
+
+
+
+% ========= design =========
+
+\setbeamertemplate{blocks}[rounded]
+
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
+
+\setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{enumerate subitem}[default]
+\setbeamertemplate{enumerate subsubitem}[default]
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]{}
+
+% underline of title
+\setbeamertemplate{frametitle}{%
+    \vspace{0.5ex}
+    \usebeamerfont{frametitle}\insertframetitle\\%
+    \color{textcolor!50}{\hrulefill}
+}
+
+
+
+% ========= other settings =========
+
+% algorithm
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+
+% TikZ
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows}
+
+\lstset{
+    basicstyle={\ttfamily\footnotesize},
+    breaklines=true,
+    keywordstyle={\color{blue}},
+    commentstyle={\color{green}}, stringstyle=\color{red}, numbers=left,
+    frame=single,
+    tabsize=2,
+}
+
+
+% ======== for japanese =========
+
+\newcommand{\usejapanese}{
+    \uselanguage{japanese}
+    \languagepath{japanese}
+    \deftranslation[to=japanese]{Theorem}{定理}
+    \deftranslation[to=japanese]{Lemma}{補題}
+    \deftranslation[to=japanese]{Example}{例}
+    \deftranslation[to=japanese]{Examples}{例}
+    \deftranslation[to=japanese]{Definition}{定義}
+    \deftranslation[to=japanese]{Definitions}{定義}
+    \deftranslation[to=japanese]{Problem}{問題}
+    \deftranslation[to=japanese]{Solution}{解}
+    \deftranslation[to=japanese]{Fact}{事実}
+    \deftranslation[to=japanese]{Proof}{証明}
+    \def\proofname{証明}
+}
